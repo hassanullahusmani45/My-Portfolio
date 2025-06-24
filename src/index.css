@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@utility container {
+    margin: 0 auto;
+    /* max-width: 1280px; */
+    padding: 2rem;
+    /* border: 1px solid #ccc; */
+}
+
+.menu {
+    @apply hover:text-orange-500 hover:scale-90 hover:cursor-pointer duration-200 transition-all;
+}
+.btn-resume {
+    @apply flex items-center justify-center gap-1 bg-gradient-to-br from-green-500 to-blue-500  rounded-md px-3 py-2 hover:bg-gradient-to-br hover:from-orange-500 hover:to-green-600 transition-all duration-300;
+}
+.btn-githup{
+    @apply flex items-center justify-center gap-1 bg-gradient-to-tr from-blue-500 to-green-500 rounded-md hover:bg-orange-500  px-3 py-2 hover:bg-gradient-to-tr hover:from-green-500 hover:to-orange-500;
+}
+
+.active{
+    @apply text-cyan-500;
+}
+
+@utility myShadoew {
+    box-shadow: 5px 5px 5px #b35e2d, -5px -5px 5px #ffd1b4;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
