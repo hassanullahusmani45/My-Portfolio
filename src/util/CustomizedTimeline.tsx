@@ -5,7 +5,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
 import MinistryFinance from '../assets/ministry_logo.png'
 import EntireThinkersTechnology from '../assets/EntireThinkersTechnology.png'
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -21,7 +20,7 @@ export default function CustomizedTimeline() {
                     sx={{ m: 'auto 0' }}
                     align="right"
                     variant="body2"
-                    display={isMobile && 'none'}
+                    display={isMobile ? 'none' : undefined}
                 >
                     <div className={`text-orange-400`}>April 2025 - Present or Now</div>
                 </TimelineOppositeContent>
@@ -59,7 +58,7 @@ export default function CustomizedTimeline() {
                     sx={{ m: 'auto 0' }}
                     align="right"
                     variant="body2"
-                    display={isMobile && 'none'}
+                    display={isMobile ? 'none' : undefined}
                 >
                     <div className={`text-yellow-300`}>June 2024 - April 2025</div>
                 </TimelineOppositeContent>
