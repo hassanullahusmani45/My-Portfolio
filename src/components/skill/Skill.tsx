@@ -35,7 +35,7 @@ const Skill = ({ children }: childrenProps) => {
 
     return (
         <motion.div
-            className="w-[400px] h-[360px] bg-gradient-to-tr from-sky-900 to-slate-800 rounded-xl shadow-md shadow-sky-800 hover:shadow-lg hover:shadow-sky-900 overflow-hidden cursor-grab p-6"
+            className="sm:w-[400px] h-[360px] bg-gradient-to-tr from-sky-900 to-slate-800 rounded-xl shadow-md shadow-sky-800 hover:shadow-lg hover:shadow-sky-900 overflow-hidden cursor-grab p-6"
             style={{ x, y, rotateX, rotateY, z: 100 }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
