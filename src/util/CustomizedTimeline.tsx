@@ -44,7 +44,7 @@ export default function CustomizedTimeline() {
                         <div className=" sm:hidden text-lg text-orange-200">April 2025 - Present or Now</div>
                     </span>
                     <span>
-                        <div dir='ltr' className=" mt-4 bg-gray-900 border border-orange-400 shadow-md shadow-orange-400 rounded-2xl rounded-tl-none div-5">
+                        <div dir='ltr' className=" mt-4 bg-gray-900 border border-orange-400 shadow-md shadow-orange-400 rounded-2xl rounded-tl-none">
                             <div className="text-orange-500 text-md m-4">Frontend Developer</div>
                             <div className='text-justify text-sm m-4'>
                                 Working as a frontend developer responsible for building and maintaining web applications and MIS platforms using React, Redux-Toolkit, React-Hook-Form, Zod, Tailwind CSS, and RESTful APIs. Gained hands-on experience with real-world project workflows and collaborated using GitLab. Worked closely with the development team to deploy and improve user interfaces and optimize performance. Played a key role in modernizing legacy systems and ensuring responsive design across devices.
@@ -83,7 +83,7 @@ export default function CustomizedTimeline() {
                         <div className=" sm:hidden text-lg text-yellow-200">April 2025 - Present or Now</div>
                     </span>
                     <span>
-                        <div dir='ltr' className={` bg-gray-900 mt-4 text-sm border border-yellow-300 shadow-md shadow-yellow-300 rounded-2xl ${isMobile && "rounded-tl-none"} sm:rounded-tr-none div-5`}>
+                        <div dir='ltr' className={` bg-gray-900 mt-4 text-sm border border-yellow-300 shadow-md shadow-yellow-300 rounded-2xl ${isMobile && "rounded-tl-none"} sm:rounded-tr-none`}>
                             <div className="text-yellow-400 text-md m-4">Fullstack Externship</div>
                             <div className='text-justify text-sm m-4'>
                                 Contributed to both frontend and backend development using Laravel, MySQL, Bootstrap, AJAX, jQuery, JavaScript, and Tailwind CSS. Developed secure and responsive web interfaces, built RESTful APIs, and collaborated with the team maintain scalable applications. Gained practical experience in real-world project workflows and version control using GitHub.
