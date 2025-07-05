@@ -9,9 +9,11 @@ interface ProjectProps {
   date: string;
   isPublic?: boolean;
   description: string;
+  viewCode?: string;
+  viewLive?: string;
 }
 
-export default function Project({ coverImage, technologies, projectName, date, isPublic, description }: ProjectProps) {
+export default function Project({ coverImage, technologies, projectName, date, isPublic, description, viewCode, viewLive }: ProjectProps) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -89,10 +91,10 @@ export default function Project({ coverImage, technologies, projectName, date, i
             <div className="text-justify text-slate-300 my-5">{description}</div>
             {isPublic ? (
               <div className="flex justify-center items-center mt-5 gap-5">
-                <a href="https://github.com/hassanullahusmani45/My-GitHup-Profile" target="blank" className="btn-githup min-w-32">View Code</a>
-                <a href="#" target="blank" className="btn-resume min-w-32">View Live App</a>
+                <a href={viewCode ? viewCode : "#"} target="blank" className="btn-githup min-w-32">View Code</a>
+                <a href={viewLive ? viewLive : "#"} target="blank" className="btn-resume min-w-32">View Live App</a>
               </div>
-            ):(
+            ) : (
               <div className="text-red-400 text-lg italic">Note: This project is private and not publicly accessible!</div>
             )}
 
