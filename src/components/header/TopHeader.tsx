@@ -17,19 +17,19 @@ export default function TopHeader() {
             <div>
                 {
                     isMobile ? (
-                        <div className="flex flex-col  md:justify-center md:items-center  sm:flex-row sm:items-end font-medium text-lg text-white gap-2 sm:gap-5">
-                            <div className="relative">
-                                <TiThMenuOutline onClick={() => setShowMenu(true)} className="size-8 cursor-pointer text-cyan-700 hover:text-orange-400 transition-all" />
-                                {showMenu && (
-                                    <div className="absolute transition-all right-0 bg-gray-900 border-x rounded-lg px-6 py-4 space-y-3">
-                                        <a href="#aboutme" className={`menu ${menu === "aboutme" ? "active" : ""}`} onClick={() => setMenu("aboutme")}>About me</a>
-                                        <a href="#skills" className={`menu ${menu === "skills" ? "active" : ""}`} onClick={() => setMenu("skills")}>Skills</a>
-                                        <a href="#experience" className={`menu ${menu === "experience" ? "active" : ""}`} onClick={() => setMenu("experience")}>Experience</a>
-                                        <a href="#projects" className={`menu ${menu === "projects" ? "active" : ""}`} onClick={() => setMenu("projects")}>Projects</a>
-                                        <a href="#contactme" className={`menu ${menu === "contactme" ? "active" : ""}`} onClick={() => setMenu("contactme")}>Contact me</a>
+                        <div className="relative">
+                            <TiThMenuOutline onClick={() => setShowMenu(prev => !prev)} className={`size-8 cursor-pointer z-50  transition-all ${showMenu ? " text-orange-500 rotate-90" : "text-cyan-700"}`} />
+                            {showMenu && (
+                                <div className="absolute transition-all right-0 bg-gray-900 border-x rounded-lg px-3 py-4 space-y-3">
+                                    <div className="flex flex-col justify-start">
+                                        <a href="#aboutme" className={`menu ${menu === "aboutme" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("aboutme"); setShowMenu(false); }}>About me</a>
+                                        <a href="#skills" className={`menu ${menu === "skills" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("skills"); setShowMenu(false); }}>Skills</a>
+                                        <a href="#experience" className={`menu ${menu === "experience" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("experience"); setShowMenu(false); }}>Experience</a>
+                                        <a href="#projects" className={`menu ${menu === "projects" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("projects"); setShowMenu(false); }}>Projects</a>
+                                        <a href="#contactme" className={`menu ${menu === "contactme" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("contactme"); setShowMenu(false); }}>Contact me</a>
                                     </div>
-                                )}
-                            </div>
+                                </div>
+                            )}
                         </div>
                     ) : (
                         <div className="flex flex-col  md:justify-center md:items-center  sm:flex-row sm:items-end font-medium text-lg text-white gap-2 sm:gap-5">
