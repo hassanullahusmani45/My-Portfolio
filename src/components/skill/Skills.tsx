@@ -16,13 +16,13 @@ import { TbApi, TbFileTypeSql } from "react-icons/tb";
 
 export default function Skills() {
 
-    const {menu ,setMenu}=useMenu();
+    const { menu, setMenu } = useMenu();
     return (
         <section id="skills" className="my-32 pt-10">
-            <a href="#skills" onClick={()=>setMenu("skills")} className={`flex justify-center items-center text-2xl font-bold ${menu === "skills" ? "text-cyan-500" : "text-orange-500"}`}>Skills</a>
+            <a href="#skills" onClick={() => setMenu("skills")} className={`flex justify-center items-center text-2xl font-bold ${menu === "skills" ? "text-cyan-500" : "text-orange-500"}`}>Skills</a>
             <div className="flex justify-center items-center text-green-500">...................................................................</div>
             <div className="flex items-center justify-center text-slate-300 text-sm mt-16">
-                <div className="grid grid-cols-1 sm:grid-cols-2 items-center text-slate-300 text-sm gap-y-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 items-center text-slate-300 text-sm gap-y-16 sm:gap-x-16">
                     <Skill >
                         <div className="flex justify-center items-center mb-6 text-lg font-medium text-white">Frotend</div>
                         <div className=" grid grid-cols-3 gap-4 my-3">
