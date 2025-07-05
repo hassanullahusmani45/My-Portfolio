@@ -1,10 +1,14 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 type childrenProps = {
     children: React.ReactNode;
 };
 
 const Skill = ({ children }: childrenProps) => {
+    const isMobile = useMediaQuery('(max-width:640px)');
+
+
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -34,17 +38,30 @@ const Skill = ({ children }: childrenProps) => {
     };
 
     return (
-        <motion.div
-            className="sm:w-[400px] h-[360px] bg-gradient-to-tr from-sky-900 to-slate-800 rounded-xl shadow-md shadow-sky-800 hover:shadow-lg hover:shadow-sky-900 overflow-hidden cursor-grab p-6"
-            style={{ x, y, rotateX, rotateY, z: 100 }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            drag
-            dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-            dragElastic={0.50}
-        >
-            { children }
-        </motion.div>
+
+        <div>
+            {
+                isMobile ? (
+                    <div className="sm:w-[400px] h-[360px] bg-gradient-to-tr from-sky-900 to-slate-800 rounded-xl shadow-md shadow-sky-800 overflow-hidden p-6">
+                        {children}
+                    </div>
+                ) : (
+                    <motion.div
+                        className="sm:w-[400px] h-[360px] bg-gradient-to-tr from-sky-900 to-slate-800 rounded-xl shadow-md shadow-sky-800 hover:shadow-lg hover:shadow-sky-900 overflow-hidden cursor-grab p-6"
+                        style={{ x, y, rotateX, rotateY, z: 100 }}
+                        onMouseMove={handleMouseMove}
+                        onMouseLeave={handleMouseLeave}
+                        drag
+                        dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                        dragElastic={0.5}
+                    >
+                        {children}
+                    </motion.div>
+                )
+            }
+
+        </div>
+
     );
 };
 
