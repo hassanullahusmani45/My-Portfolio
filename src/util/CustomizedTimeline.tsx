@@ -80,7 +80,7 @@ export default function CustomizedTimeline() {
                 <TimelineContent sx={{ pt: '150px', pb: '12px', px: 2 }}>
                     <span>
                         <div className="text-yellow-300">Entire Thinkers Technology</div>
-                        <div className=" sm:hidden text-lg text-yellow-200">April 2025 - Present or Now</div>
+                        <div className=" sm:hidden text-lg text-yellow-200">June 2024 - April 2025</div>
                     </span>
                     <span>
                         <div dir='ltr' className={` bg-gray-900 mt-4 text-sm border border-yellow-300 shadow-md shadow-yellow-300 rounded-2xl ${isMobile && "rounded-tl-none"} sm:rounded-tr-none`}>

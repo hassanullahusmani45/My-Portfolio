@@ -9,19 +9,17 @@ export default function TopHeader() {
     const isMobile = useMediaQuery('(max-width:640px)');
     const [showMenu, setShowMenu] = useState(false);
     return (
-        <section className="flex items-start justify-between sm:items-center">
-            <a href="#" title="hassanullah usmani portfolio"><TbTargetArrow className="size-12 text-cyan-500 hover:scale-95 transition-all" /></a>
-
-
+        <section className="flex items-start justify-between sm:items-center mb-20 sm:mb-0">
+            <a href="https://hassanullahusmani-portfolio.netlify.app" title="hassanullah usmani portfolio"><TbTargetArrow className="size-10 text-cyan-500 hover:scale-95 transition-all" /></a>
 
             <div>
                 {
                     isMobile ? (
                         <div className="relative">
-                            <TiThMenuOutline onClick={() => setShowMenu(prev => !prev)} className={`size-8 cursor-pointer z-50  transition-all ${showMenu ? " text-orange-500 rotate-90" : "text-cyan-700"}`} />
+                            <TiThMenuOutline onClick={() => setShowMenu(prev => !prev)} className={`size-7 cursor-pointer z-50  transition-all ${showMenu ? " text-orange-500 rotate-90" : "text-cyan-500"}`} />
                             {showMenu && (
-                                <div className="absolute transition-all right-0 bg-gray-900 border-x rounded-lg px-3 py-4 space-y-3">
-                                    <div className="flex flex-col justify-start">
+                                <div className="absolute transition-all right-0 bg-gray-900 border-x rounded-lg px-3 py-4">
+                                    <div className="flex flex-col justify-start gap-3">
                                         <a href="#aboutme" className={`menu ${menu === "aboutme" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("aboutme"); setShowMenu(false); }}>About me</a>
                                         <a href="#skills" className={`menu ${menu === "skills" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("skills"); setShowMenu(false); }}>Skills</a>
                                         <a href="#experience" className={`menu ${menu === "experience" ? "active" : ""} text-nowrap`} onClick={() => { setMenu("experience"); setShowMenu(false); }}>Experience</a>
