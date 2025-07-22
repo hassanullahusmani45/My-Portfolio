@@ -18,7 +18,7 @@ export default function Footer() {
             <div className=" text-orange-500 my-2">Follow Me on Social Media</div>
             <div className="flex justify-center items-center gap-4">
                 <a
-                    href="https://www.linkedin.com/in/hassanullah-usmani-037777343/" className="rounded-full p-2 w-12 h-12 bg-sky-800 cursor-pointer flex items-center justify-center text-white hover:scale-90 duration-300 transition-all">
+                    href="https://www.linkedin.com/in/hassanullahusmani" className="rounded-full p-2 w-12 h-12 bg-sky-800 cursor-pointer flex items-center justify-center text-white hover:scale-90 duration-300 transition-all">
                     <LuLinkedin className="size-6" />
                 </a>
                 <a
