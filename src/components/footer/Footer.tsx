@@ -2,9 +2,25 @@ import { FaInstagram } from "react-icons/fa";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 import { useMenu } from "../../context/MenuContext";
-
+import { useEffect, useState } from "react";
 export default function Footer() {
     const { menu, setMenu } = useMenu();
+
+    const [views, setViews] = useState<number | null>(null);
+
+    useEffect(() => {
+        fetch('https://api.visitorapi.com/api/visitor-count?pid=Am516YXxTuESPGqRYigK')
+            .then(res => res.json())
+            .then(data => {
+                setViews(data.count);
+                console.log(data);
+                
+            })
+            .catch(err => {
+                console.error("خطا در واکشی تعداد بازدید:", err);
+            });
+    }, []);
+
     return (
         <footer className="flex flex-col items-center justify-center text-white gap-2 mt-40 mb-6">
             <div className="grid grid-cols-6 sm:grid-cols-5 text-center font-medium text-lg text-white gap-x-10 gap-y-2 sm:gap-5 mb-6">
@@ -34,7 +50,7 @@ export default function Footer() {
                     <FaInstagram className="size-6" />
                 </a>
             </div>
-
+            <p>تعداد بازدیدها: {views !== null ? views : "در حال بارگذاری..."}</p>
             <p className="mt-8">&copy; 2025 Hassanullah Usmani. All rights reserved.</p>
         </footer>
     )
