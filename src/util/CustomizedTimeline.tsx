@@ -22,7 +22,7 @@ export default function CustomizedTimeline() {
                     variant="body2"
                     display={isMobile ? 'none' : undefined}
                 >
-                    <div className={`text-orange-400`}>April 2025 - Present or Now</div>
+                    <div className={`text-orange-400`}>April 2025 - Jul 2025</div>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
                     <TimelineConnector />
@@ -41,7 +41,7 @@ export default function CustomizedTimeline() {
                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                     <span>
                         <div className="text-orange-400">Ministry of Finance</div>
-                        <div className=" sm:hidden text-lg text-orange-200">April 2025 - Present or Now</div>
+                        <div className=" sm:hidden text-lg text-orange-200">April 2025 - Jul 2025</div>
                     </span>
                     <span>
                         <div dir='ltr' className=" mt-4 bg-gray-900 border border-orange-400 shadow-md shadow-orange-400 rounded-2xl rounded-tl-none">
