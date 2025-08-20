@@ -2,9 +2,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 import { useMenu } from "../../context/MenuContext";
-
 export default function Footer() {
     const { menu, setMenu } = useMenu();
+
+    
+
     return (
         <footer className="flex flex-col items-center justify-center text-white gap-2 mt-40 mb-6">
             <div className="grid grid-cols-6 sm:grid-cols-5 text-center font-medium text-lg text-white gap-x-10 gap-y-2 sm:gap-5 mb-6">
@@ -18,7 +20,7 @@ export default function Footer() {
             <div className=" text-orange-500 my-2">Follow Me on Social Media</div>
             <div className="flex justify-center items-center gap-4">
                 <a
-                    href="https://www.linkedin.com/in/hassanullah-usmani-037777343/" className="rounded-full p-2 w-12 h-12 bg-sky-800 cursor-pointer flex items-center justify-center text-white hover:scale-90 duration-300 transition-all">
+                    href="https://www.linkedin.com/in/hassanullahusmani" className="rounded-full p-2 w-12 h-12 bg-sky-800 cursor-pointer flex items-center justify-center text-white hover:scale-90 duration-300 transition-all">
                     <LuLinkedin className="size-6" />
                 </a>
                 <a
@@ -34,7 +36,6 @@ export default function Footer() {
                     <FaInstagram className="size-6" />
                 </a>
             </div>
-
             <p className="mt-8">&copy; 2025 Hassanullah Usmani. All rights reserved.</p>
         </footer>
     )
