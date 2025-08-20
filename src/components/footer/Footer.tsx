@@ -30,7 +30,7 @@ export default function Footer() {
                     <FiFacebook className="size-6" />
                 </a>
                 <a
-                    href="" className="rounded-full p-2 w-12 h-12 bg-conic from-rose-600 via-amber-600 to-rose-600  cursor-pointer flex items-center justify-center hover:scale-90 duration-300 transition-all">
+                    href="https://www.instagram.com/hassanullahusmani45" className="rounded-full p-2 w-12 h-12 bg-conic from-rose-600 via-amber-600 to-rose-600  cursor-pointer flex items-center justify-center hover:scale-90 duration-300 transition-all">
                     <FaInstagram className="size-6" />
                 </a>
             </div>
